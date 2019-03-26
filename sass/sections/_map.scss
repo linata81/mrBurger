@@ -1,0 +1,82 @@
+.section__map {
+    // background-image: url(../img/map.png);
+    // background-repeat: no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    height: 100%;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+.footer {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/bg/footer_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    @include phones {
+        height: 115px;
+    }
+}
+.footer__wrapper {
+    flex-direction: row;
+
+    @include phones {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+.footer__info {
+    width:50%;
+    font-family: 'Ubuntu-light';
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+
+     @include phones {
+         width:100%;
+         align-items: center;
+         padding: 20px 0;
+     }
+}
+.footer__adress {
+    margin-top: 5px;
+}
+.footer__tel {
+    display: flex;
+    margin-top: 4px;
+}
+.tel {
+    display: block;
+    margin-left: 7px;
+    color: $orange;
+}
+.footer__cocial {
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include phones {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+}
+.link__cocial {
+    margin-left: 20px;
+}
+.cocial {
+    fill: #575757;
+    width: 22px;
+    height: 22px;
+    &:hover {
+        fill: #fff;
+    }
+}

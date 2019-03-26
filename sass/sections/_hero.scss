@@ -1,0 +1,139 @@
+.hero {
+    background-image: url(../img/bg/hero_bg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    justify-content: flex-start;
+}
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.header__logo {
+    margin-top: 5px;
+    margin-right: auto;
+}
+.logo__img {
+    display: block;
+    max-width: 100%;
+}
+.header__menu {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        display: none;
+    }
+}
+.nav{
+    margin-right: 15px;
+}
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.nav__item {
+    display: flex;
+    align-items: center;
+    &:after {
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        @include circle(5px, #fff);
+        margin: 0 15px;
+    }
+    &:last-child:after {
+        display: none;
+    }
+}
+.nav__link {
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .5s;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.header__links {
+    @include tablets {
+        margin-right: 62px;
+    }
+    @include phones {
+        margin-right: 75px;
+    }
+}
+.hero__contant-container {
+    margin-top: 4%;
+    margin-bottom: auto;
+
+    @include phones {
+        margin-top: 0;
+    }
+}
+.hero__content {
+    display: flex;
+
+    @include tablets {
+        height: 50%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20%;
+    }
+    @include phones {
+        padding: 0;
+    }
+}
+.hero__img, .hero__description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.hero__img {
+    @include phones {
+        height: 291px;    
+    }
+}
+.hero__img-pic{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.title_hero {
+    padding-top: 57px;
+    padding-bottom: 10px;
+
+    @include tablets {
+        font-size: 63px;
+        padding-top: 20px;
+    }
+    @include phones {
+       padding: 0;
+    }
+}
+.hero__description-text {
+    color: #fff;
+    font-family: 'Lifehack';
+    font-size: 65px;
+    line-height: 1;
+
+    @include phones {
+        font-size: 54px;
+    }
+}
+.hero__scroll {
+    position: absolute;
+    bottom: 40px;
+    left: 48%;
+
+    @include phones {
+        bottom: 0;
+    }
+}
